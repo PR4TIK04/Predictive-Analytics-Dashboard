@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.figure_factory as ff
-import shap
 import matplotlib.pyplot as plt
 from ydata_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
@@ -164,3 +163,4 @@ if uploaded_file is not None:
                                file_name="Predictions.csv", mime="text/csv")
 
     
+
