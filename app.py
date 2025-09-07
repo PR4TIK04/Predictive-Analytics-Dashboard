@@ -4,8 +4,6 @@ import numpy as np
 import plotly.express as px
 import plotly.figure_factory as ff
 import matplotlib.pyplot as plt
-from ydata_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import (
@@ -42,15 +40,17 @@ if uploaded_file is not None:
     st.markdown("---")
     st.header("🔍 Exploratory Data Analysis (EDA)")
 
-    option = st.selectbox("Choose Analysis Type", ["Dataset Overview", "Profiling Report"])
+    option = st.selectbox("Choose Analysis Type", ["Dataset Overview", "Correlation Heatmap"])
 
     if option == "Dataset Overview":
         col = st.selectbox("Select a Column for Visualization", df.columns)
         st.bar_chart(df[col].value_counts())
 
-    elif option == "Profiling Report":
-        profile = ProfileReport(df, explorative=True)
-        st_profile_report(profile)
+    elif option == "Correlation Heatmap":
+        st.subheader("Correlation Heatmap")
+        corr = df.corr(numeric_only=True)
+        fig = px.imshow(corr, text_auto=True, color_continuous_scale="RdBu_r")
+        st.plotly_chart(fig, use_container_width=True)
 
     # ===========================
     # STEP 3: DATA VISUALIZATION
@@ -161,6 +161,3 @@ if uploaded_file is not None:
             csv = df_predictions.to_csv(index=False).encode("utf-8")
             st.download_button("📥 Download Predictions (CSV)", data=csv,
                                file_name="Predictions.csv", mime="text/csv")
-
-    
-
