@@ -1,8 +1,8 @@
-streamlit==1.37.0
-pandas==2.2.2
-numpy==1.26.4
-plotly==5.24.0
-matplotlib==3.9.2
-ydata-profiling==4.6.4
-streamlit-pandas-profiling==0.1.3
-scikit-learn==1.5.1
+streamlit
+pandas
+numpy
+plotly
+matplotlib
+ydata-profiling
+streamlit-pandas-profiling
+scikit-learn
