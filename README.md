@@ -78,13 +78,15 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+### See it here
+[Predictive-Analytics-Dashboard](https://predictive-analytics-dashboard.streamlit.app)
 ## 👨‍💻 Author
 
 **Pratik Chauhan**  
 💼 Final-Year Engineering Student | AI/ML Enthusiast | Frontend Developer  
 📧 **Email:** chauhanpratik21444@gmail.com  
 
-🔗 [LinkedIn]([https://www.linkedin.com/in/pr4tik04]) | [GitHub](https://github.com/PR4TIK04)
+🔗 [LinkedIn]([https://www.linkedin.com/in/pr4tik04])] | [GitHub](https://github.com/PR4TIK04)
 
 ---
 
